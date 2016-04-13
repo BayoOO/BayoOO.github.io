@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+  
+  <style>  
+	
+</style>
+  
+     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+    <title>
+
+      R Vinci vs F Pennetta
+
+    </title>
+    
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+
+    <script type="text/javascript">
+
+      google.load('visualization', '1', {packages: ['corechart']});
+
+    </script>
+
+    <script type="text/javascript">
+    
+    function drawVis(){
+    
+    //Define Colors
+    
+    var backColor = '#ffffff';
+    
+    var gridlinesColor = '#d1d1d1';
+    
+    var axisTitleColor = '#3e3e3e';
+    
+    var color1 = '#32cd32'; //Bar Color (player 1)
+    
+    var color2 = '#1c0a6d'; //Bar Color (player 2)
+    
+    //Data creation
+
+  
+    var data = google.visualization.arrayToDataTable([
+          ['Player', 'First Serve', { role: 'style' }],
+          ['R Vinci',  21, color1],
+          ['F Pennetta',  23, color2],
+    ]);
+
+
+    var data2 = google.visualization.arrayToDataTable([
+          ['Player', 'Second Serve', { role: 'style' }],
+          ['R Vinci',  7, color1],
+          ['F Pennetta',  8, color2],
+    ]);
+   
+   var data3 = google.visualization.arrayToDataTable([
+          ['Player', 'Aces', { role: 'style' }],
+          ['R Vinci',  0, color1],
+          ['F Pennetta',  3, color2],
+    ]);
+        
+    var data4 = google.visualization.arrayToDataTable([
+          ['Player', 'Net Points Attempted', { role: 'style' }],
+          ['R Vinci',  34, color1],
+          ['F Pennetta',  14, color2],
+    ]);
+        
+    var data5 = google.visualization.arrayToDataTable([
+          ['Player', 'Net Points Won', { role: 'style' }],
+          ['R Vinci',  18, color1],
+          ['F Pennetta',  7, color2],
+    ]);
+    
+    var data6 = google.visualization.arrayToDataTable([
+          ['Player', 'First Serve', { role: 'style' }],
+          ['R Vinci',  .60, color1],
+          ['F Pennetta',  .63, color2],
+    ]);
+    
+    var data7 = google.visualization.arrayToDataTable([
+          ['Player', 'Second Serve', { role: 'style' }],
+          ['R Vinci',  .40, color1],
+          ['F Pennetta',  .37, color2],
+    ]);
+    
+	var data8 = google.visualization.arrayToDataTable([
+          ['Player', 'Unforced Errors', { role: 'style' }],
+          ['R Vinci', 28, color1],
+          ['F Pennetta', 17, color2],
+    ]);
+        
+   
+    // *** CREATE CHARTS ***//
+    
+    new google.visualization.ColumnChart(document.getElementById('columnChart')).
+
+    	draw(data,
+    
+    		{//width:380, height:150,
+    		
+    		//bar: {groupWidth: '50%'},
+    		
+    		title:'First Serve Won',
+
+            legend: 'none',
+
+            backgroundColor: backColor,
+
+            //chartArea:{width:"90%",height:"80%"},
+
+            hAxis: {textStyle: {color: axisTitleColor}},
+
+            vAxis: {ticks: [0, 5, 10, 15, 20, 25], baselineColor: gridlinesColor},
+
+        
+            });
+      
+    new google.visualization.ColumnChart(document.getElementById('columnChart2')).
+
+    	draw(data2,
+    
+    		{//width:380, height:150,
+    		
+    		title:'Second Serve Won',
+
+            legend: 'none',
+
+            backgroundColor: backColor,
+
+            //chartArea:{width:"90%",height:"80%"},
+
+            hAxis: {textStyle: {color: axisTitleColor}},
+
+            vAxis: {ticks: [0, 2, 4, 6, 8, 10], baselineColor: gridlinesColor},
+
+        
+            });
+    
+    new google.visualization.ColumnChart(document.getElementById('columnChart3')).
+
+    	draw(data3,
+    
+    		{//width:380, height:150,
+    		
+    		title:'Aces Won',
+
+            legend: 'none',
+
+            backgroundColor: backColor,
+
+            //chartArea:{width:"90%",height:"80%"},
+
+            hAxis: {textStyle: {color: axisTitleColor}},
+
+            vAxis: {ticks: [0, 1, 2, 3], baselineColor: gridlinesColor},
+
+        
+            });
+            
+    new google.visualization.ColumnChart(document.getElementById('columnChart4')).
+
+    	draw(data4,
+    
+    		{//width:380, height:150,
+    		
+    		title:'Net Points Attempted',
+
+            legend: 'none',
+
+            backgroundColor: backColor,
+
+            //chartArea:{width:"90%",height:"80%"},
+
+            hAxis: {textStyle: {color: axisTitleColor}},
+
+            vAxis: {ticks: [0, 10, 20, 30, 40], baselineColor: gridlinesColor},
+
+        
+            });
+            
+     new google.visualization.ColumnChart(document.getElementById('columnChart5')).
+
+    	draw(data5,
+    
+    		{//width:380, height:150,
+    		
+    		title:'Net Points Won',
+
+            legend: 'none',
+
+            backgroundColor: backColor,
+
+            //chartArea:{width:"90%",height:"80%"},
+
+            hAxis: {textStyle: {color: axisTitleColor}},
+
+            vAxis: {ticks: [0, 5, 10, 15, 20], baselineColor: gridlinesColor},
+
+        
+            });
+            
+    new google.visualization.ColumnChart(document.getElementById('columnChart6')).
+
+    	draw(data6,
+    
+    		{//width:380, height:150,
+    		
+    		title:'First Serve Percentage',
+
+            legend: 'none',
+
+            backgroundColor: backColor,
+
+            //chartArea:{width:"90%",height:"80%"},
+
+            hAxis: {textStyle: {color: axisTitleColor}},
+
+            vAxis: {ticks: [.0, .25, .50, .75, 1], format:'percent', baselineColor: gridlinesColor},
+
+        
+            });
+            
+    new google.visualization.ColumnChart(document.getElementById('columnChart7')).
+
+    	draw(data7,
+    
+    		{//width:380, height:150,
+    		
+    		title:'Second Serve Percentage',
+
+            legend: 'none',
+
+            backgroundColor: backColor,
+
+            //chartArea:{width:"90%",height:"80%"},
+
+            hAxis: {textStyle: {color: axisTitleColor}},
+
+            vAxis: {ticks: [.0, .25, .50, .75, 1], format:'percent', baselineColor: gridlinesColor},
+
+        
+            });
+			
+	new google.visualization.ColumnChart(document.getElementById('columnChart8')).
+
+    	draw(data8,
+    
+    		{//width:380, height:150,
+    		
+    		title:'Unforced Errors',
+
+            legend: 'none',
+
+            backgroundColor: backColor,
+
+            //chartArea:{width:"90%",height:"80%"},
+
+            hAxis: {textStyle: {color: axisTitleColor}},
+
+            vAxis: {ticks: [0, 5, 10, 15, 20, 25, 30], baselineColor: gridlinesColor},
+
+        
+            });
+            
+    }
+    
+    google.setOnLoadCallback(drawVis);
+    
+    </script>
+  
+  <link rel="stylesheet" href="style.css">
+
+  </head>
+  
+    <body style="-webkit-tap-highlight-color: rgba(0,0,0,0); BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px; background: #ffffff">
+
+    <div id="columnChart" class="action" ontouchstart="" style="-webkit-tap-highlight-color: rgba(0,0,0,0); z-index: 1; position: absolute; left: 20px; top: 120px; width: 190px; height: 150px"></div>
+    <div id="columnChart2" class="action" ontouchstart="" style="-webkit-tap-highlight-color: rgba(0,0,0,0); z-index: 1; position: absolute; left: 210px; top: 120px; width: 190px; height: 150px"></div>
+    <div id="columnChart3" class="action" ontouchstart="" style="-webkit-tap-highlight-color: rgba(0,0,0,0); z-index: 1; position: absolute; left: 20px; top: 280px; width: 190px; height: 150px"></div>
+    <div id="columnChart4" class="action" ontouchstart="" style="-webkit-tap-highlight-color: rgba(0,0,0,0); z-index: 1; position: absolute; left: 400px; top: 120px; width: 190px; height: 150px"></div>
+    <div id="columnChart5" class="action" ontouchstart="" style="-webkit-tap-highlight-color: rgba(0,0,0,0); z-index: 1; position: absolute; left: 590px; top: 120px; width: 190px; height: 150px"></div>
+    <div id="columnChart6" class="action" ontouchstart="" style="-webkit-tap-highlight-color: rgba(0,0,0,0); z-index: 1; position: absolute; left: 210px; top: 280px; width: 190px; height: 150px"></div>
+    <div id="columnChart7" class="action" ontouchstart="" style="-webkit-tap-highlight-color: rgba(0,0,0,0); z-index: 1; position: absolute; left: 400px; top: 280px; width: 190px; height: 150px"></div>
+	<div id="columnChart8" class="action" ontouchstart="" style="-webkit-tap-highlight-color: rgba(0,0,0,0); z-index: 1; position: absolute; left: 590px; top: 280px; width: 190px; height: 150px"></div>
+    
+    
+    <div class="relative">
+		<table>
+  		<tr>
+    		<td><font color = '#32cd32' > R Vinci</font></td>
+    		<td><font color = '#32cd32' > 4</font></td>
+    		<td><font color = '#32cd32' > 1</font></td>
+  		</tr>
+  		<tr>
+    		<td><font color = '#1c0a6d' > F Pennetta (Winner)</font></td>
+    		<td><font color = '#1c0a6d' > 6</font></td>
+    		<td><font color = '#1c0a6d' > 6</font></td>
+  		</tr>
+		</table>
+		</div>
+    
+	<aside id="sidebar">
+		<h6>Introduction</h6>
+			<p>In the quarterfinals of the US Open, Flavia Pennetta defeated  Roberta Vinci , 6-4, 6-1.</p>
+		<h6>The Game</h6>
+			<p>Pennetta won more of the first serves, meaning the first of the two attempts to serve that a player is allowed at the beginning of a point that the opponent was unable to break. She also won more second serves.</p><p>Pennetta absolutely dominated in the aces category. An ace is a serve where the tennis ball lands inside the service box and is not touched by the receiver, earning 3 to Vinci's 0.</p><p>Vinci had more net points attempted and won than Pennetta. Net points are points won or lost on approaching the net, as opposed to a point won or lost by a stroke from the baseline.</p><p>Both players were closely matched in first serve and second serve percentages. The first and second serve percentage is how many serves won over the total amount of serves.</p><p>Vinci had more unforced errors than Pennetta.Unforced errors are errors in a service (a game in wich the player is serving) or return shot that cannot be attributed to any factor other than poor judgement and execution by the player.</p>
+		<h6>Conclusion</h6>
+			<p> In conclusion, this is a game where just the statistics don't fully tell the story of how Pennetta won.</p>
+	</aside>
+	
+</body>
+
+  
+</html>
